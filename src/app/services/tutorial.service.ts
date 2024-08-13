@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Tutorial } from '../models/tutorial.model';
 
 //const baseUrl = 'http://localhost:8080/api/tutorials';
-const baseUrl = 'https://node-mongodb-server-dev.azurewebsites.net/api/tutorials';
+const baseUrl = 'https://mongodb-server-dev.azurewebsites.net/api/tutorials';
 
 @Injectable({
   providedIn: 'root',
