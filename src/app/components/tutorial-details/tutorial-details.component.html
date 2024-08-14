@@ -2,14 +2,14 @@
   <div *ngIf="currentTutorial.id">
     <h4>Tutorial</h4>
     <div>
-      <label><strong>Title:</strong></label> {{ currentTutorial.title }}
+      <label><strong>Titulo:</strong></label> {{ currentTutorial.title }}
     </div>
     <div>
       <label><strong>Description:</strong></label>
       {{ currentTutorial.description }}
     </div>
     <div>
-      <label><strong>Status:</strong></label>
+      <label><strong>Estado:</strong></label>
       {{ currentTutorial.published ? "Published" : "Pending" }}
     </div>
 
@@ -21,7 +21,7 @@
 
   <div *ngIf="!currentTutorial">
     <br />
-    <p>Please click on a Tutorial...</p>
+    <p>Por favor haga clic en un tutorial...</p>
   </div>
 </div>
 
@@ -30,7 +30,7 @@
     <h4>Tutorial</h4>
     <form>
       <div class="form-group">
-        <label for="title">Title</label>
+        <label for="title">Titulo</label>
         <input
           type="text"
           class="form-control"
@@ -40,7 +40,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="description">Description</label>
+        <label for="description">Descripción</label>
         <input
           type="text"
           class="form-control"
@@ -51,7 +51,7 @@
       </div>
 
       <div class="form-group">
-        <label><strong>Status:</strong></label>
+        <label><strong>Estado:</strong></label>
         {{ currentTutorial.published ? "Published" : "Pending" }}
       </div>
     </form>
@@ -61,18 +61,18 @@
       *ngIf="currentTutorial.published"
       (click)="updatePublished(false)"
     >
-      UnPublish
+      Dejar de publicar
     </button>
     <button
       *ngIf="!currentTutorial.published"
       class="badge badge-primary mr-2"
       (click)="updatePublished(true)"
     >
-      Publish
+      Publicar
     </button>
 
     <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
-      Delete
+      Borrar
     </button>
 
     <button
@@ -80,13 +80,13 @@
       class="badge badge-success mb-2"
       (click)="updateTutorial()"
     >
-      Update
+      Actualizar
     </button>
     <p>{{ message }}</p>
   </div>
 
   <div *ngIf="!currentTutorial.id">
     <br />
-    <p>Cannot access this Tutorial...</p>
+    <p>No puedo acceder a este tutorial...</p>
   </div>
 </ng-template>
